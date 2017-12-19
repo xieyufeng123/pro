@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="myWeb">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>shopping</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/my_main.css"/>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+</head>
+<body style="overflow-x: hidden">
+<header class="navbar-fixed-top">
+  <div class="navbar navbar-inverse" style="background: #313131">
+    <ul class="nav row">
+      <li role="presentation" class="dropdown col-xs-6 col-sm-3 ">
+        <a href="#" style="color: #bababa;" class="dropdown-toggle my-nav-btn" data-toggle="dropdown" role="button" aria-expanded="false">
+          LANGUAGE<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu my-list-left" role="menu">
+          <li><a href="#">ENGLISH</a></li>
+          <li><a href="#">DEUTSCH</a></li>
+        </ul>
+      </li>
+      <li class="hidden-xs col-sm-6 text-center my-text-white my-text-center my-text-norm2">
+        welcome to my life
+      </li>
+      <li role="presentation" class="dropdown col-xs-6 col-sm-3">
+        <a href="#" style="color:#bababa" class="dropdown-toggle my-nav-btn my-btn-right" data-toggle="dropdown" role="button" aria-expanded="false">
+          <span class="glyphicon glyphicon-shopping-cart"></span> YOUR CART
+        </a>
+        <ul style="" class="dropdown-menu my-list-right" role="menu">
+          <li><a href="#">ENGLISH</a></li>
+          <li><a href="#">DEUTSCH</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="my-nav-main">
+    <button class="my-res-btn">
+      <span class="glyphicon glyphicon-align-justify icon-bar"></span>
+    </button>
+    <h4 class="hidden-sm hidden-md hidden-lg my-text-c">Brooklyn Soap Company</h4>
+    <ul class="my-nav-list">
+      <li class="my-nav-item">
+        <a href="myhomepage.html" class="text">HOME</a>
+      </li>
+      <li class="my-nav-item">
+        <a href="my_story.html" style="text-decoration:none">STORY</a>
+      </li>
+      <li class="my-nav-item">
+        <a href="#/myMainList">SHOP</a>
+      </li>
+      <li class="my-nav-item">
+        <a href="#">JOURNAL</a>
+      </li>
+      <li class="my-nav-item my-menu-main">
+        <a href="#" data-toggle="menu-toggle" class="my-menu-ctrl">MORE</a>
+        <ul data-toggle="menu-list" class="my-menu-list">
+          <li class="my-menu-item"><a href="#">Find a Barber</a></li>
+          <li class="my-menu-item"><a href="#">Shopfinder</a></li>
+          <li class="my-menu-item"><a href="#">Press</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<div class="container-fluid my-container my-shopping-main" style="padding:0;background: #fbfbfb;padding-top:50px;">
+  <div class="my-shopping-list shopOpen">
+    <div class="my-shopping-nav">
+      <ul class="" style="padding:10px 0">
+        <li>CATEGORIES:</li>
+        <li><a href="#/myMainList">
+          BESTSELLERS
+        </a></li>
+        <li><a href="#/myBeardCare">
+          BEARD CARE
+        </a></li>
+        <li><a href="#/myWoods">
+          THE WOODS
+        </a></li>
+        <li><a href="#/myBodyHair">
+          BODY & HAIR CARE
+        </a></li>
+        <li><a href="#/myKits">
+          KITS & GIFTS
+        </a></li>
+      </ul>
+    </div>
+  </div>
+  <!--angular-->
+  <div ng-view>
+
+  </div>
+</div>
+<footer class="container-fluid" style="margin-top:80px; padding:0;">
+  <!--<div class="row my-footer-main">-->
+    <!--<div class="col-xs-12 my-footer-text-main">-->
+      <!--<h4 class="my-footer-title">-->
+        <!--<strong>Sign up for our Newsletter and save 5€ on your next order!</strong>-->
+      <!--</h4>-->
+    <!--</div>-->
+    <!--<div class="col-xs-12">-->
+      <!--<form action="#" style="text-align: center">-->
+        <!--<input type="email" class="my-footer-inout" placeholder="Your e-mail address"/>-->
+        <!--<p class="my-shopping-btn">-->
+          <!--<a href="#" class="">Subscribe</a>-->
+        <!--</p>-->
+      <!--</form>-->
+    <!--</div>-->
+  <!--</div>-->
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="row my-link-main">
+        <div class="col-xs-12 col-sm-4">
+          <h4>
+            <a href="#">
+              <strong>Like us on Facebook</strong>
+            </a>
+          </h4>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <h4>
+            <a href="#">
+              <strong>Follow us on Instagram</strong>
+            </a>
+          </h4>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <h4>
+            <a href="#">
+              <strong>Follow us on Twitter</strong>
+            </a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-footer-secret" style="">
+    <div class="col-xs-12 col-sm-4" style="text-align: center">
+      <p>PAYMENT METHODS:</p>
+      <div>
+        <img src="" alt=""/>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4" style="text-align: center">
+      <p>NEED HELP?</p>
+      <div>
+        <p style="padding:10px 5px;border: 1px solid #bababa">
+          CALL US: <a href="#">+49 40 8823 2207</a><br/>
+          WHATSAPP US: <a href="#"> +49 157 3 888 0010</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4" style="text-align: center">
+      <p>SHIPPING:</p>
+      <div>
+        <p>
+          <img src="" alt=""/>
+        </p>
+        <p>CO² NEUTRAL SHIPPING</p>
+      </div>
+    </div>
+    <div class="col-xs-4 col-xs-offset-4" style="text-align: center;margin-bottom: 30px;margin-top:10px">
+      E-MAIL: SUPPORT@BKLYNSOAP.COM
+    </div>
+  </div>
+  <div class="row" style="background: #2b2a2a;padding:5px 50px 0">
+    <ul class="my-footer-zuidi">
+      <li><a href="#">PRESS</a></li>
+      <li><a href="#">Legal Info</a></li>
+      <li><a href="#">Data Protection</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script>
+  var app=angular.module('myWeb',['ng','ngRoute']);
+  app.config(function($routeProvider){
+    $routeProvider
+      .when('/myMainList',{templateUrl:'tpl/bestsellers.html',controller:'mainListCtrl'})
+      .when('/myBeardCare',{templateUrl:'tpl/beardCare.html',controller:'beardCareCtrl'})
+      .when('/myBodyHair',{templateUrl:'tpl/bodyHair.html',controller:'bodyHairCtrl'})
+      .when('/myKits',{templateUrl:'tpl/kits.html',controller:'kitsCtrl'})
+      .when('/myWoods',{templateUrl:'tpl/woods.html',controller:'woodsCtrl'})
+      .otherwise({redirectTo:'/myMainList'});
+  });
+  app.controller("mainListCtrl",['$scope','$http',function($scope,$http){
+    $http.get('data/mainlist.php').success(function(data){
+      $scope.datalist=data;
+    })
+  }]);
+  app.controller("beardCareCtrl",['$scope','$http',function($scope,$http){
+    $http.get('data/beardcare.php').success(function(data){
+//      console.log(data);
+      $scope.datalist=data;
+    })
+  }]);
+  app.controller("bodyHairCtrl",['$scope','$http',function($scope,$http){
+    $http.get('data/bodyhair.php').success(function(data){
+//      console.log(data);
+      $scope.datalist=data;
+    })
+  }]);
+  app.controller("kitsCtrl",['$scope','$http',function($scope,$http){
+    $http.get('data/kits.php').success(function(data){
+      $scope.datalist=data;
+    })
+  }]);
+  app.controller("woodsCtrl",['$scope','$http',function($scope,$http){
+    $http.get('data/woods.php').success(function(data){
+      $scope.datalist=data;
+//      console.log(data);
+    })
+  }]);
+  $('li.dropdown').mouseover(function() {
+    $(this).addClass('open');    }).mouseout(function() {        $(this).removeClass('open');    });
+</script>
+<script src="js/my_main.js"></script>
+</body>
+</html>
